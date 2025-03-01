@@ -28,10 +28,15 @@ for (let i = 0; i < lista.length; i++) {
 }
 
 function sortearAmigo() {
-  let resultado = Math.floor(Math.random() * lista.length);
+    if (lista.length < 2) {
+        alert("Debes ingresar al menos dos amigo");
+        return;
+    }else{  let resultado = Math.floor(Math.random() * lista.length);
   let ganador = lista[resultado];
   alert("El ganador es: " + ganador);
 Limpiar();
+    return;
+    }   
 }
 
 function Limpiar() {
